@@ -5,77 +5,22 @@
 <title>Achadinhos SHEIN</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
-  margin: 0;
-  padding: 0;
+body .galeria {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
-h1 {
-  text-align: center;
-  padding: 20px 10px;
-  color: #fff;
-  font-size: 26px;
-}
-
-.sub {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.produto {
-  background: #fff;
-  border-radius: 18px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
-  transition: transform 0.3s;
-}
-
-.produto:hover {
-  transform: translateY(-5px);
-}
-
-.produto img {
+.galeria img {
   width: 100%;
-  border-radius: 15px;
-  margin-bottom: 8px;
-}
-
-h2 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-p {
-  font-size: 14px;
-  color: #555;
-}
-
-.botao {
-  display: block;
-  margin-top: 12px;
-  padding: 15px;
-  background: linear-gradient(135deg, #00c853, #00e676);
-  color: #fff;
-  text-decoration: none;
+  max-width: 280px;
+  height: auto;
   border-radius: 12px;
-  font-weight: bold;
-  font-size: 16px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
 }
 
-.botao:hover {
-  filter: brightness(0.9);
-}
 </style>
 </head>
 
