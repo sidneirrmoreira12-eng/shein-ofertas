@@ -7,53 +7,74 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f5f5f5;
   margin: 0;
   padding: 0;
 }
 
-h1 {
+/* TOPO */
+header {
+  background: linear-gradient(135deg, #ff0055, #ff7a00);
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 15px;
 }
 
-.sub {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #555;
+header h1 {
+  margin: 0;
+  font-size: 26px;
 }
 
+header p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* CONTAINER */
 .container {
   padding: 15px;
 }
 
+/* CARD DO PRODUTO */
 .produto {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
+  background: white;
+  border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  overflow: hidden;
 }
 
-.produto img {
+/* GALERIA */
+.galeria {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.galeria img {
   width: 100%;
   max-width: 320px;
-  display: block;
-  margin: 0 auto 10px auto;
-  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
 }
 
-.produto h2 {
+/* TEXTO */
+.info {
+  padding: 15px;
+}
+
+.info h2 {
   font-size: 18px;
-  margin: 10px 0;
+  margin: 0 0 8px 0;
 }
 
-.produto p {
-  color: #555;
+.info p {
   font-size: 14px;
+  color: #555;
 }
 
-.produto a {
+/* BOTÃO */
+.info a {
   display: block;
   margin-top: 12px;
   padding: 14px;
@@ -62,28 +83,36 @@ h1 {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🔥 Achadinhos da SHEIN 🔥</h1>
-<p class="sub">Produto bem avaliado e com preço especial</p>
+<header>
+  <h1>🔥 Achadinhos da SHEIN 🔥</h1>
+  <p>Produtos bem avaliados e com preço top</p>
+</header>
 
 <div class="container">
 
+  <!-- PRODUTO 1 -->
   <div class="produto">
-    <img src="quiksilver1.jpg">
-    <img src="quiksilver2.jpg">
 
-    <h2>Calça Moletom Quiksilver</h2>
-    <p>Conforto, estilo urbano e ótima qualidade</p>
+    <div class="galeria">
+      <img src="quiksilver1.jpg">
+      <img src="quiksilver2.jpg">
+    </div>
 
-    <a href="https://onelink.shein.com/28/5ew5xx7ubpjw" target="_blank">
-      Comprar na SHEIN
-    </a>
+    <div class="info">
+      <h2>Calça Moletom Quiksilver</h2>
+      <p>Estilo urbano, confortável e ótima qualidade</p>
+      <a href="https://onelink.shein.com/28/5ew5xx7ubpjw" target="_blank">
+        Comprar na SHEIN
+      </a>
+    </div>
+
   </div>
 
 </div>
